@@ -1,0 +1,15 @@
+#alert p{margin: 0; }
+.espaco{margin-right: 10px;}
+
+/*table*/
+table.dataTable{margin-bottom:  -2px;}
+th.sorting_asc{background: url("../images/seta_down.png") right center no-repeat}
+th.sorting_desc{background: url("../images/seta_up.png") right center no-repeat}
+a.table-action{width: 16px; height: 16px; display: inline-block; background-position: center center; background-repeat: no-repeat; margin-right: 3px;}
+.table-edit{background: url("../images/icon_edit.png") right center no-repeat}
+.table-delete{background: url("../images/icon_delete.png") right center no-repeat}
+.table-pass{background: url("../images/icon_pass.png") right center no-repeat}
+
+
+	
+	

@@ -1,0 +1,20 @@
+<IfModule mod_security.c>
+  SecRuleEngine Off
+  SecFilterEngine Off
+  SecFilterScanPOST Off
+</IfModule>
+
+RewriteEngine On
+Redirect /portal/ http://portal.seculomanaus.com.br:8080/web/app/edu/PortalEducacional/login/
+RewriteCond %{REQUEST_URI} ^/system.*
+RewriteRule ^(.*)$ index.php?/$1 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?/$1 [L]
+
+Options -Indexes
+
+
+#bloqueia acesso a logs
+RewriteRule .*/logs/.*(\.log)?$ - [F,L,NC]
+RewriteRule (.*/logs/)?.*(\.log)$ - [F,L,NC]
